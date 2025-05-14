@@ -1,27 +1,63 @@
 # Crafting Effective Prompts for Agentic AI Systems: Patterns and Practices
 
+![](./public/image.png)
+
+
+## Table of Products
+
+| 产品名称 | Logo |
+|---------|------|
+| xAI (Grok) | <img src="public/logo/xAI%20(Grok).png" width="32"> |
+| v0 | <img src="public/logo/v0.png" width="32"> |
+| Windsurf | <img src="public/logo/Windsurf.png" width="32"> |
+| SameNew | <img src="public/logo/SameNew.png" width="32"> |
+| Roocode | <img src="public/logo/Roocode.png" width="32"> |
+| Replit | <img src="public/logo/Replit.png" width="32"> |
+| Perplexity AI | <img src="public/logo/Perplexity%20AI.png" width="32"> |
+| OpenAI | <img src="public/logo/OpenAI.png" width="32"> |
+| Notion | <img src="public/logo/Notion.png" width="32"> |
+| Notebooklm | <img src="public/logo/Notebooklm.png" width="32"> |
+| Mistral AI | <img src="public/logo/Mistral%20AI.png" width="32"> |
+| Manus | <img src="public/logo/Manus.png" width="32"> |
+| Lovable | <img src="public/logo/Lovable.png" width="32"> |
+| Grok | <img src="public/logo/Grok.png" width="32"> |
+| Hume AI | <img src="public/logo/Hume%20AI.png" width="32"> |
+| Gemini | <img src="public/logo/Gemini.png" width="32"> |
+| Fellou AI | <img src="public/logo/Fellou%20AI.png" width="32"> |
+| Devin | <img src="public/logo/Devin.png" width="32"> |
+| Cursor | <img src="public/logo/Cursor.png" width="32"> |
+| Cline | <img src="public/logo/Cline.png" width="32"> |
+| Claude AI | <img src="public/logo/Claude%20AI.png" width="32"> |
+| BlackboxAi | <img src="public/logo/BlackboxAi.png" width="32"> |
+
 ## Table of Contents
 
-*   [Introduction: The Blueprint of Agentic AI](#introduction-the-blueprint-of-agentic-ai)
-*   [The Foundation: Core Principles of Agentic Prompts](#the-foundation-core-principles-of-agentic-prompts)
-    *   [1. Clear Role Definition and Scope](#1-clear-role-definition-and-scope)
-    *   [2. Structured Instructions and Organization](#2-structured-instructions-and-organization)
-    *   [3. Explicit Tool Integration and Usage Guidelines](#3-explicit-tool-integration-and-usage-guidelines)
-    *   [4. Step-by-Step Reasoning and Planning](#4-step-by-step-reasoning-and-planning)
-    *   [5. Environment and Context Awareness](#5-environment-and-context-awareness)
-    *   [6. Domain-Specific Expertise and Constraints](#6-domain-specific-expertise-and-constraints)
-    *   [7. Safety, Alignment, and Refusal Protocols](#7-safety-alignment-and-refusal-protocols)
-    *   [8. Consistent Tone and Interaction Style](#8-consistent-tone-and-interaction-style)
-*   [Case Studies: Analyzing Real-World Prompts](#case-studies-analyzing-real-world-prompts)
-    *   [Vercel v0: UI Generation & Component Tooling](#vercel-v0-ui-generation--component-tooling)
-    *   [same.new: Agentic Pair Programming & Strict Tooling](#samenew-agentic-pair-programming--strict-tooling)
-    *   [Manus: General Purpose Agent & Explicit Loop](#manus-general-purpose-agent--explicit-loop)
-    *   [OpenAI ChatGPT (GPT-4.5/4o): Integrated Tools & Policies](#openai-chatgpt-gpt-454o-integrated-tools--policies)
-    *   [Notes on Other Systems (Cline, Bolt, Augment, Claude Code)](#notes-on-other-systems-cline-bolt-augment-claude-code)
-*   [Synthesizing Best Practices: Key Takeaways for Builders](#synthesizing-best-practices-key-takeaways-for-builders)
-*   [Unique Conventions & Architectural Differences](#unique-conventions--architectural-differences)
-*   [Conclusion: Building the Agentic Future](#conclusion-building-the-agentic-future)
-*   [Visual AI Agent: Harpagan](https://harpagan.com)
+- [Crafting Effective Prompts for Agentic AI Systems: Patterns and Practices](#crafting-effective-prompts-for-agentic-ai-systems-patterns-and-practices)
+  - [Table of Products](#table-of-products)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction: The Blueprint of Agentic AI](#introduction-the-blueprint-of-agentic-ai)
+  - [The Foundation: Core Principles of Agentic Prompts](#the-foundation-core-principles-of-agentic-prompts)
+    - [1. Clear Role Definition and Scope](#1-clear-role-definition-and-scope)
+    - [2. Structured Instructions and Organization](#2-structured-instructions-and-organization)
+    - [3. Explicit Tool Integration and Usage Guidelines](#3-explicit-tool-integration-and-usage-guidelines)
+    - [4. Step-by-Step Reasoning and Planning](#4-step-by-step-reasoning-and-planning)
+    - [5. Environment and Context Awareness](#5-environment-and-context-awareness)
+    - [6. Domain-Specific Expertise and Constraints](#6-domain-specific-expertise-and-constraints)
+    - [7. Safety, Alignment, and Refusal Protocols](#7-safety-alignment-and-refusal-protocols)
+    - [8. Consistent Tone and Interaction Style](#8-consistent-tone-and-interaction-style)
+  - [Case Studies: Analyzing Real-World Prompts](#case-studies-analyzing-real-world-prompts)
+    - [Vercel v0: UI Generation \& Component Tooling](#vercel-v0-ui-generation--component-tooling)
+      - [Distinctive Features:](#distinctive-features)
+    - [same.new: Agentic Pair Programming \& Strict Tooling](#samenew-agentic-pair-programming--strict-tooling)
+      - [Distinctive Features:](#distinctive-features-1)
+    - [Manus: General Purpose Agent \& Explicit Loop](#manus-general-purpose-agent--explicit-loop)
+      - [Distinctive Features:](#distinctive-features-2)
+    - [OpenAI ChatGPT (GPT-4.5/4o): Integrated Tools \& Policies](#openai-chatgpt-gpt-454o-integrated-tools--policies)
+      - [Distinctive Features:](#distinctive-features-3)
+    - [Notes on Other Systems (Cline, Bolt, Augment, Claude Code)](#notes-on-other-systems-cline-bolt-augment-claude-code)
+  - [Synthesizing Best Practices: Key Takeaways for Builders](#synthesizing-best-practices-key-takeaways-for-builders)
+  - [Unique Conventions \& Architectural Differences](#unique-conventions--architectural-differences)
+  - [Conclusion: Building the Agentic Future](#conclusion-building-the-agentic-future)
 
 
 ---
@@ -330,7 +366,7 @@ Across different agentic systems, several core principles consistently emerge in
 >
 > *   **Claude:** Explicitly states refusal categories (graphic content, illegal activities, weapons, malicious code) and a specific refusal style.
 >     ```
->     Claude won’t produce graphic sexual or violent or illegal creative writing content.
+>     Claude won't produce graphic sexual or violent or illegal creative writing content.
 >     ...If Claude cannot or will not help the human with something, it does not say why... keeps its response to 1-2 sentences.
 >     ```
 >     *[Source: Claude/Claude-Sonnet-3.7.txt](https://github.com/dontriskit/awesome-ai-system-prompts/blob/main/Claude/Claude-Sonnet-3.7.txt)*
@@ -349,7 +385,7 @@ Across different agentic systems, several core principles consistently emerge in
 >
 > *   **ChatGPT 4o:** Explicitly instructed to match the user's vibe.
 >     ```
->     Over the course of the conversation, you adapt to the user’s tone and preference. Try to match the user’s vibe, tone, and generally how they are speaking.
+>     Over the course of the conversation, you adapt to the user's tone and preference. Try to match the user's vibe, tone, and generally how they are speaking.
 >     ```
 >     *[Source: ChatGPT/4o.md](https://github.com/dontriskit/awesome-ai-system-prompts/blob/main/ChatGPT/4o.md)*
 >
